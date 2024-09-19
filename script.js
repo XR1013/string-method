@@ -15,3 +15,21 @@ const h3_text = h3.innerText;
 h3.innerText = h3_text.substring(0, 50);
 
 // 미션 - 조건문을 활용해서 h3에 들어가는 문자 값이 50글자가 안되면 해당 문자를 그대로 출력하고 50글자가 넘어가면 50글자까지 자른 뒤 그 뒤에 ... 말줄임표 추가
+
+/*
+if (h3_text.length > 30) {
+    h3.innerText = h3_text.substring(0, 30) + "...";
+    } else {
+    h3.innerText = h3_text;
+}
+*/
+
+/*
+if (h3_text.length > 30) h3.innerText = h3_text.substring(0, 30) + "...";
+    else h3.innerText = h3_text;
+*/
+
+h3.innerText = h3_text.length > 30 ? h3_text.substring(0, 30) + "..." : h3_text;
+
+//미션 - 위의 기능을 재사용하기 편하도록 함수로 패키징
+// shortenText('h3', 30); 9시 30분까지
