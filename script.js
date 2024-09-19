@@ -2,7 +2,7 @@ shortenText("h1", 5);
 shortenText("h2", 5);
 shortenText("h3", 20);
 
-function shortenText(elem, len) 
+function shortenText(elem, len) {
 //첫 번째 인수로 받은 문자값으로 DOM요소 선택
 
 const el = document.querySelector(elem);
@@ -13,3 +13,4 @@ const el_text = el.innerText;
 
 el.innerText = 
 el_text.length > len ? el_text.substring(0, len) + "..." : el_text;
+}
