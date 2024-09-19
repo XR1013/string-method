@@ -3,6 +3,7 @@
 
 function changeText(elem, spc1, spc2) {
     const el = document.querySelector(elem);
+    // 문자열.trim() : 문자열 앞 뒤의 빈칸을 제거해서 정리
     const el_text = el.innerText;
     el.innerText = el_text.split(spc1).join(spc2);
 }
